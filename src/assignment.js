@@ -13,10 +13,23 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
+
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+
+    var total=0;
+    for (var i in arrayOfNumbers){
+    total+= arrayOfNumbers[i];
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+
+return total;
+}
+
+let Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+var sum= sumOfNumbers(Numbers)
+
+console.log(sum)
+
 
 /**
  * Challenge - 2
@@ -27,29 +40,20 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+function countEvenNumbers(array){
+	var count = 0;
+	for(let i = 0 ; i < array.length; i++) {
+		if (array[i] % 2 === 0){
+			count++;
+		}
+	}
+	return count;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-/**
- * Challenge - 3
- * 
- * Given an array of numbers representing temperatures in Celsius,
- * convert each number to Fahrenheit and return a new array containing the converted
- * temperatures in Fahrenheit. Decimal figures in the converted values in Fahrenheit should be removed.
- * E.g 51.21 should just be 51 (hint: Math.trunc(...) function)
- * If you did Challenge - 3, remove the comment in the line just after this function
- * 
- * See https://www.thoughtco.com/celcius-to-farenheit-formula-609227 for the conversion formula
- * 
- * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
- * @returns Array the converted temperatures in Fahrenheit
- */
-function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
-}
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+var Count_even= countEvenNumbers(arr)
+
+console.log(Count_even)
 
 
 // ========================
