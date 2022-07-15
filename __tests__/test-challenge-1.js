@@ -1,36 +1,30 @@
+const assignment = require('../src/assignment.js');
 
-function sumOfNumbers(arrayOfNumbers) {
+const { sumOfNumbers } = assignment;
+const maybe = sumOfNumbers === undefined ? test.skip : test;
 
-    var total=0;
-    for (var i in arrayOfNumbers){
-    total+= arrayOfNumbers[i];
-}
-
-return total;
-}
-
-let Numbers = [68,
-    -68,
-    27,
-    94,
-    72,
-    -25,
-    -51,
-    32,
-    10,
-    64,
-    -94,
-    4,
-    34,
-    -86,
-    90,
-    81,
-    20,
-    -56,
-    -91,
-    -50
-];
-
-var rhyme= sumOfNumbers(Numbers)
-
-console.log(rhyme)
+maybe('Challenge - 1 : my sumNumbers function can sum an array of numbers', () => {
+    const numbers = [
+        68,
+        -68,
+        27,
+        94,
+        72,
+        -25,
+        -51,
+        32,
+        10,
+        64,
+        -94,
+        4,
+        34,
+        -86,
+        90,
+        81,
+        20,
+        -56,
+        -91,
+        -50
+    ];
+    expect(sumOfNumbers(numbers)).toBe(75);
+});
